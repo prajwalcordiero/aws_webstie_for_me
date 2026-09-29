@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to apply for the AWS Builder Center program</title>
+<meta name="description" content="Step-by-step guide to joining AWS Builder Center and registering for the AWS Builder program.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#bd3fdf;
+    --deep:#2a0a35;
+    --ink:#120418;
+    --paper:#fbf3fe;
+    --line:#e2b6f0;
+    --ok:#0a7a3d;
+    --bad:#b3261e;
+    --display:"Bowlby One","Arial Black",Impact,sans-serif;
+    --body:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--body);font-size:1.05rem;line-height:1.6;color:var(--ink);background:var(--paper)}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px}
+
+  /* hero */
+  header{background:var(--purple);border-bottom:10px solid var(--ink);padding:28px 0 56px}
+  .bar{display:flex;justify-content:space-between;align-items:baseline;font-weight:700;margin-bottom:48px}
+  .bar span:last-child{font-weight:500}
+  h1{font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,7vw,4.4rem);line-height:1.02;margin:0 0 24px;color:var(--ink);text-wrap:balance}
+  .by{margin:0 0 28px;font-weight:500}
+  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:999px;border:2px solid var(--ink);transition:background .15s,color .15s}
+  .btn:hover{background:#fff;color:var(--ink)}
+  .btn.alt{background:transparent;color:var(--ink);margin-left:8px}
+  .btn.alt:hover{background:var(--ink);color:#fff}
+
+  /* steps */
+  main{padding:56px 0 24px}
+  h2{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,4vw,2.1rem);margin:0 0 8px}
+  .lead{margin:0 0 40px;max-width:60ch}
+  ol.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+  ol.steps>li{counter-increment:s;position:relative;padding:0 0 36px 76px;border-left:3px solid var(--purple);margin-left:24px}
+  ol.steps>li:last-child{border-left-color:transparent;padding-bottom:0}
+  ol.steps>li::before{content:counter(s);position:absolute;left:-26px;top:-4px;width:50px;height:50px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--display);display:grid;place-items:center;font-size:1.3rem}
+  ol.steps>li{margin-left:24px}
+  h3{margin:0 0 6px;font-size:1.25rem}
+  li p{margin:0 0 10px;max-width:62ch}
+  .note{background:#fff;border:2px solid var(--ink);border-radius:12px;padding:12px 16px;margin:12px 0;max-width:62ch}
+  .note b{display:block}
+  table{border-collapse:collapse;background:#fff;border:2px solid var(--ink);border-radius:12px;overflow:hidden;margin:10px 0;width:100%;max-width:420px}
+  th,td{text-align:left;padding:8px 14px;border-bottom:1px solid var(--line)}
+  th{background:var(--deep);color:#fff}
+  tr:last-child td{border-bottom:0}
+  code{background:#fff;border:1px solid var(--line);padding:1px 7px;border-radius:6px;font-size:.95em}
+
+  /* alias checker */
+  .checker{background:var(--deep);color:#fff;border-radius:16px;padding:22px;margin:14px 0;max-width:520px}
+  .checker label{font-weight:700;display:block;margin-bottom:8px}
+  .checker input{width:100%;font:inherit;padding:12px 14px;border-radius:10px;border:2px solid var(--purple);background:#fff;color:var(--ink)}
+  .checker .url{font-size:.9rem;opacity:.8;margin:8px 0 10px;word-break:break-all}
+  .rules{list-style:none;margin:0;padding:0}
+  .rules li{padding-left:28px;position:relative;margin:2px 0;color:#f0c9fb}
+  .rules li::before{content:"○";position:absolute;left:4px}
+  .rules li.pass{color:#7dffb0}
+  .rules li.pass::before{content:"✓"}
+  .rules li.fail{color:#ffb4ab}
+  .rules li.fail::before{content:"✕"}
+
+  /* final */
+  .final{background:var(--purple);border-top:10px solid var(--ink);margin-top:64px;padding:52px 0 60px}
+  .final p{max-width:56ch}
+  footer{background:var(--ink);color:#e9c6f5;padding:22px 0;font-size:.9rem}
+  footer p{margin:0}
+
+  @media (max-width:520px){
+    ol.steps>li{padding-left:56px;margin-left:20px}
+    ol.steps>li::before{width:42px;height:42px;left:-22px}
+    .btn.alt{margin:10px 0 0}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="bar"><span>AWS Builder Center</span><span></span></div>
+    <h1>How to apply for the AWS Builder Center program</h1>
+    <p class="by">Guide by AWS Ambassador Prajwal Royston Cordiero</p>
+    <a class="btn" href="https://bit.ly/3TxFvQ3" target="_blank" rel="noopener">Open AWS Builder Center</a>
+    <a class="btn alt" href="#steps">See the steps</a>
+  </div>
+</header>
+
+<main class="wrap" id="steps">
+  <h2>Six steps, about five minutes</h2>
+  <p class="lead">Follow these in order. You'll create your Builder Center profile, then send your details to the sheet so you're counted in the program.</p>
+
+  <ol class="steps">
+    <li>
+      <h3>Open Builder Center and sign in</h3>
+      <p>Click the link above (or scan the QR code from the poster). On the "Welcome home, builder" page, click <b>Sign in</b> at the top right.</p>
+    </li>
+
+    <li>
+      <h3>Continue with Google</h3>
+      <p>In the sign-in window, click <b>Continue with Google</b>, pick any email you prefer, and continue.</p>
+      <div class="note"><b>Then click Back</b>Once you land on the page that says "Welcome home, builder", click <b>Back</b> at the top of the page to return to profile setup.</div>
+    </li>
+
+    <li>
+      <h3>Set up your alias</h3>
+      <p>Your alias is your unique handle on Builder Center and <b>can't be changed later</b>. Use 3 to 19 characters: lowercase letters and numbers only, no capital letters or special characters. Test yours here:</p>
+      <div class="checker">
+        <label for="alias">Try an alias</label>
+        <input id="alias" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="yourname">
+        <div class="url" id="url">builder.aws.com/community/@</div>
+        <ul class="rules" aria-live="polite">
+          <li id="r-len">Be 3 to 19 characters</li>
+          <li id="r-chars">Use letters a-z, numbers 0-9</li>
+        </ul>
+      </div>
+      <p>Choose your country, then click <b>Continue</b>.</p>
+    </li>
+
+    <li>
+      <h3>Tell AWS you're a student</h3>
+      <p>On "Be the first to know", click <b>Continue</b>. On "Are you a student?", choose <b>Yes</b>.</p>
+      <p>Pick your <b>Program of study</b> (your branch). If your branch isn't listed, choose <b>Other</b>. Then enter your expected graduation date in <code>YYYY/MM</code> format:</p>
+      <table>
+        <thead><tr><th>Your year</th><th>Graduation date</th></tr></thead>
+        <tbody>
+          <tr><td>Third year</td><td>2028/09</td></tr>
+          <tr><td>Second year</td><td>2029/09</td></tr>
+          <tr><td>First year</td><td>2029/09</td></tr>
+        </tbody>
+      </table>
+    </li>
+
+    <li>
+      <h3>Copy your alias from your profile</h3>
+      <p>Click your name at the top right, then <b>Manage profile</b>. Your alias appears under your name, starting with <code>@</code>. Copy it.</p>
+    </li>
+
+    <li>
+      <h3>Add your details to the sheet</h3>
+      <p>Open the sheet and add your <b>name</b>, <b>alias</b> and <b>email</b>. This is the final step.</p>
+      <a class="btn" href="https://docs.google.com/spreadsheets/d/18sEh3iS8E0UixlQRI4zFkGiC80k4hHkOTGOl6P1LES0/edit?usp=sharing" target="_blank" rel="noopener">Open the sheet</a>
+    </li>
+  </ol>
+</main>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Have a question? Join the community</h2>
+    <p>The AWS Builder WhatsApp group shares updates about the program and answers doubts.</p>
+    <a class="btn" href="https://chat.whatsapp.com/HKmgREiLm9C95EOVK10Vk2" target="_blank" rel="noopener">Join the WhatsApp group</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><p>Unofficial student guide. AWS and AWS Builder Center are trademarks of Amazon Web Services.</p></div>
+</footer>
+
+<script>
+  (function(){
+    var input=document.getElementById('alias'),
+        url=document.getElementById('url'),
+        rLen=document.getElementById('r-len'),
+        rChars=document.getElementById('r-chars');
+    function set(el,state){el.className=state}
+    input.addEventListener('input',function(){
+      var v=input.value;
+      url.textContent='builder.aws.com/community/@'+v;
+      if(!v){set(rLen,'');set(rChars,'');return}
+      set(rLen,(v.length>=3&&v.length<=19)?'pass':'fail');
+      set(rChars,/^[a-z0-9]+$/.test(v)?'pass':'fail');
+    });
+  })();
+</script>
+</body>
+</html>
